@@ -1,0 +1,51 @@
+.bookmark {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 45px;
+  color: #eee;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  div {
+    padding-top: 5px;
+  }
+
+  .piece {
+    background-color: rgba(102, 102, 102, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .top {
+    border-bottom: 1px solid white;
+    position: relative;
+  }
+
+  .bottom {
+    font-size: 16pt;
+  }
+
+  .tail {
+    height: 15px;
+    overflow: hidden;
+    position: relative;
+
+    > div {
+      height: 11px;
+      position: absolute;
+      top: -10px;
+      width: 50px;
+    }
+
+    .left {
+      left: -6px;
+      transform: rotate(-30deg);
+    }
+
+    .right {
+      right: -6px;
+      transform: rotate(30deg);
+    }
+  }
+}

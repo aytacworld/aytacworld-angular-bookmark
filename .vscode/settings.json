@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    "coverage": true,
+    ".vscode": true,
+    "**/*.tgz": true,
+    "package-lock.json": true,
+    "src/**/*.css": true
+  }
+}
