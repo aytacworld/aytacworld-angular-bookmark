@@ -1,16 +1,17 @@
 {
   "name": "aytacworld-angular-bookmark",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a simple bookmark icon which shows the date entered",
   "private": true,
   "scripts": {
     "clean": "rimraf dist && rimraf .temp",
+    "lint": "tslint --type-check --project tsconfig.json 'src/**/*.ts' -e 'src/**/*.spec.ts'",
     "inline": "gulp inline",
     "transpile": "ngc -p ./tsconfig.ngc.json",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/aytacworld-angular-bookmark.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/aytacworld-angular-bookmark.umd.min.js",
     "dist": "node tools/dist",
-    "build": "npm run clean && npm run inline && npm run transpile && npm run package && npm run minify && npm run dist",
+    "build": "npm run lint && npm run clean && npm run inline && npm run transpile && npm run package && npm run minify && npm run dist",
     "create": "npm run test:once && npm run build && cd dist && npm pack",
     "test": "karma start",
     "test:once": "karma start --singleRun"
@@ -23,7 +24,7 @@
     "aytacworld",
     "angular",
     "plugin",
-    "template"
+    "bookmark"
   ],
   "author": "Adem Aytaç <adem@aytacworld.com>",
   "license": "MIT",
@@ -46,6 +47,7 @@
     "@types/node": "^8.0.15",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.2.1",
+    "codelyzer": "^3.1.2",
     "css-loader": "^0.28.4",
     "gulp": "^3.9.1",
     "gulp-angular-embed-templates": "^2.3.0",
@@ -67,6 +69,7 @@
     "rollup": "^0.45.2",
     "sass-loader": "^6.0.6",
     "to-string-loader": "^1.1.5",
+    "tslint": "^5.5.0",
     "typescript": "^2.4.2",
     "uglify-js": "^3.0.25",
     "webpack": "^3.3.0"
