@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 const MONTH = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
@@ -7,7 +7,7 @@ const MONTH = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'O
   styleUrls: ['bookmark.component.scss'],
   templateUrl: './bookmark.component.html'
 })
-export class BookmarkComponent {
+export class BookmarkComponent implements OnInit {
   @Input() set date(value: Date | string) {
     const d: Date = (value as Date).getDate ? value as Date : new Date(value as string);
     this.day = d.getDate();
@@ -16,4 +16,10 @@ export class BookmarkComponent {
 
   day: number;
   month: string;
+
+  ngOnInit(): void {
+    if (!this.day) {
+      this.date = new Date();
+    }
+  }
 }
