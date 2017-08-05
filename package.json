@@ -1,6 +1,6 @@
 {
   "name": "aytacworld-angular-bookmark",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a simple bookmark icon which shows the date entered",
   "private": true,
   "scripts": {

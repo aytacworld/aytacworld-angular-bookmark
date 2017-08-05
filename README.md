@@ -8,13 +8,52 @@ This is a simple bookmark icon which shows the date entered
 
 # Usage
 
+app.module.ts
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BookmarkModule } from 'aytacworld-angular-bookmark';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BookmarkModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+app.component.ts
+```typescript
+@Component({
+  selector: 'my-app',
+  template: `<aw-bookmark [date]="input" ></aw-bookmark>`,
+})
+export class App {
+  input:Date = new Date();
+}
+```
+
 # Api
+
+|Input       |  Description   |  Type  |  Default  |
+|------------|----------------|--------|-----------|
+|date    |  the date to show | Date | Today |
 
 # Test
 
 `npm test`
 
 # Examples
+
+[http://plnkr.co/edit/7li28wsuG3nEBmA80u6Z](http://plnkr.co/edit/7li28wsuG3nEBmA80u6Z)
 
 ## MIT License
 
