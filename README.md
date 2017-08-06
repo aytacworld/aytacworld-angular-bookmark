@@ -53,7 +53,7 @@ export class App {
 
 # Examples
 
-[http://plnkr.co/edit/7li28wsuG3nEBmA80u6Z](http://plnkr.co/edit/7li28wsuG3nEBmA80u6Z)
+[http://embed.plnkr.co/Q2jBHi/](http://embed.plnkr.co/Q2jBHi/)
 
 ## MIT License
 
